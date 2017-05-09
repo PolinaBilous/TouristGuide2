@@ -19,12 +19,6 @@ namespace TouristGuide2
             InitializeComponent();
         }
 
-        /*public AddForm(Base tours)
-{
-    ShowTours(tours);
-    InitializeComponent();
-}*/
-
         // Метод для проверки заполнены ли обязательные поля.
         public static bool FildValidation(TextBox CompanyBox, TextBox CitiesBox, TextBox DurationBox, TextBox CostBox, ErrorProvider error)
         {
