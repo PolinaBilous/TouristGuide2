@@ -31,5 +31,6 @@ namespace TouristGuide2
             DataFrom = dataFrom;
             Cost = cost;
         }
+
     }
 }
