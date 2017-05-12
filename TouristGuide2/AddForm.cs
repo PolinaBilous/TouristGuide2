@@ -17,6 +17,7 @@ namespace TouristGuide2
         public AddForm()
         {
             InitializeComponent();
+            from_box.MinDate = DateTime.Now;
         }
 
         // Метод для проверки заполнены ли обязательные поля.
