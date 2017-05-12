@@ -18,7 +18,8 @@ namespace TouristGuide2
         public string DataFrom { get; set; }
         public int Cost { get; set; }
 
-        public Tour(string company, string cities, string countries, string accommodations, string excursions, string service, int duration, string dataFrom, int cost)
+        public Tour(string company, string cities, string countries, string accommodations, 
+        string excursions, string service, int duration, string dataFrom, int cost)
         {
             Company = company;
             Cities = cities;

@@ -49,7 +49,9 @@ namespace TouristGuide2
         public static void ClearError(TextBox textBox, ErrorProvider errorProvider1)
         {
             if (textBox.Text != "")
+            {
                 errorProvider1.SetError(textBox, "");
+            }
         }
 
         // Методы для валидации TextBox/
@@ -107,8 +109,9 @@ namespace TouristGuide2
             int cost = 0;
 
             FildValidation(Company_box, Cities_box, Duration_box, Cost_box, errorProvider1);
-            if (Company_box.BackColor != Color.LightPink && Cities_box.BackColor != Color.LightPink && Countries_box.BackColor != Color.LightPink
-            && Duration_box.BackColor != Color.LightPink && Cost_box.BackColor != Color.LightPink)
+            if (Company_box.BackColor != Color.LightPink && Cities_box.BackColor != Color.LightPink 
+            && Countries_box.BackColor != Color.LightPink && Duration_box.BackColor != Color.LightPink 
+            && Cost_box.BackColor != Color.LightPink)
             {
                 if (FildValidation(Company_box, Cities_box, Duration_box, Cost_box, errorProvider1))
                 {
@@ -119,29 +122,37 @@ namespace TouristGuide2
                     string excursions = Excursion_box.Text;
                     string service = Service_box.Text;
                     if (Cost_box.Text.Length > 0 && Cost_box.Text.Length < 7)
+                    {
                         cost = int.Parse(Cost_box.Text.Trim());
+                    }
                     else if (Cost_box.Text.Length >= 7)
                     {
                         MessageBox.Show("Вы уверены, что цена поездки может включать более 6 знаков? Перепроверьте свои данные и попробуйте еще раз!");
                         return;
                     }
                     if (Duration_box.Text.Length > 0 && Duration_box.Text.Length < 4)
+                    {
                         duration = int.Parse(Duration_box.Text.Trim());
+                    }
                     else if (Duration_box.Text.Length >= 4)
                     {
                         MessageBox.Show("Вы уверены, что длительность поездки может включать более 3 знаков ? Перепроверьте свои данные и попробуйте еще раз!");
                         return;
                     }
                     if (from_box.Checked == true)
+                    {
                         dataFrom = from_box.Text;
+                    }
                     else
+                    {
                         dataFrom = "";
+                    }
 
                     Tour tour = new Tour(company, cities, countries, accommodations, excursions, service, duration, dataFrom, cost);
                     tours.Add(tour);
                     dataGridView1.Rows.Add(tours[tours.Count - 1].Company, tours[tours.Count - 1].Cities, tours[tours.Count - 1].Countries,
-                    tours[tours.Count - 1].Accommodations, tours[tours.Count - 1].Excursions,
-                    tours[tours.Count - 1].Service, tours[tours.Count - 1].Duration, tours[tours.Count - 1].DataFrom, tours[tours.Count - 1].Cost);
+                    tours[tours.Count - 1].Accommodations, tours[tours.Count - 1].Excursions, tours[tours.Count - 1].Service, 
+                    tours[tours.Count - 1].Duration, tours[tours.Count - 1].DataFrom, tours[tours.Count - 1].Cost);
 
                     Company_box.Text = "";
                     Cities_box.Text = "";
@@ -168,7 +179,9 @@ namespace TouristGuide2
             Delete(deleteCitiesBox.Text, deleteCompanyBox.Text, tours);
 
             if (numOfTours == tours.Count)
+            {
                 MessageBox.Show("Путёвок с такими параметрами не найдено!");
+            }
             ShowTours(tours);
 
             deleteCompanyBox.Text = "";
@@ -244,8 +257,7 @@ namespace TouristGuide2
         // Событие для сохранения путёвки.
         private void save_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel) { return; }
 
             string FileName = saveFileDialog1.FileName;
 

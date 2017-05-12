@@ -49,8 +49,9 @@ namespace TouristGuide2
         private void Edit_Click(object sender, EventArgs e)
         {
             AddForm.FildValidation(this.Company_box, this.Cities_box, this.Duration_box, this.Cost_box, this.error);
-            if (Company_box.BackColor != Color.LightPink && Cities_box.BackColor != Color.LightPink && Countries_box.BackColor != Color.LightPink
-            && Duration_box.BackColor != Color.LightPink && Cost_box.BackColor != Color.LightPink)
+            if (Company_box.BackColor != Color.LightPink && Cities_box.BackColor != Color.LightPink
+            && Countries_box.BackColor != Color.LightPink && Duration_box.BackColor != Color.LightPink 
+            && Cost_box.BackColor != Color.LightPink)
             {
                 if (AddForm.FildValidation(this.Company_box, this.Cities_box, this.Duration_box, this.Cost_box, this.error))
                 {
@@ -100,7 +101,7 @@ namespace TouristGuide2
 
         #endregion
 
-        // // События для нажатий кнопок на клавиатуре.
+        // События для нажатий кнопок на клавиатуре.
         private void EditTour_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)

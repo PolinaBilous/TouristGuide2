@@ -49,7 +49,9 @@ namespace TouristGuide2
                 for (int i = 0; i < text.Length; i++)
                 {
                     if (text[i] == ',')
+                    {
                         cities++;
+                    }
                 }
 
                 bool res = false;
@@ -70,9 +72,13 @@ namespace TouristGuide2
                     string[] c_arr;
 
                     if (criterion == "Cities")
+                    {
                         c_arr = temp[i].Cities.Split(',');
+                    }
                     else
+                    {
                         c_arr = temp[i].Countries.Split(',');
+                    }
 
                     for (int j = 0; j < text_arr.Length; j++)
                     {
@@ -83,13 +89,23 @@ namespace TouristGuide2
                                 res = true;
                                 break;
                             }
-                            else if (k == c_arr.Length - 1) { res = false; outFactor = 1; }
-                            else { res = false; }
-                            //if (criterion != "Citiea")
+                            else if (k == c_arr.Length - 1) 
+                            {
+                                res = false;
+                                outFactor = 1; 
+                            }
+                            else 
+                            {
+                                res = false; 
+                            }
                         }
                     }
 
-                    if (temp[i].Countries == "") { res = true; outFactor = 0; };
+                    if (temp[i].Countries == "") 
+                    {
+                        res = true; 
+                        outFactor = 0; 
+                    }
 
                     if (res == false || outFactor == 1)
                     {
@@ -111,15 +127,25 @@ namespace TouristGuide2
                 for (int i = 0; i < temp.Count; i++)
                 {
                     if (criterion == "Company")
+                    {
                         x = temp[i].Company;
+                    }
                     else if (criterion == "Excursions")
+                    {
                         x = temp[i].Excursions;
+                    }
                     else if (criterion == "Accomodations")
+                    {
                         x = temp[i].Accommodations;
+                    }
                     else if (criterion == "dataFrom")
+                    {
                         x = temp[i].DataFrom.ToString();
+                    }
                     else
+                    {
                         x = temp[i].Service;
+                    }
 
                     if (x != text && x != "")
                     {
@@ -142,9 +168,13 @@ namespace TouristGuide2
                     for (int i = 0; i < temp.Count; i++)
                     {
                         if (criterion == "cost")
+                        {
                             x = temp[i].Cost;
+                        }
                         else
+                        {
                             x = temp[i].Duration;
+                        }
 
                         if (x > Convert.ToInt32(max))
                         {
@@ -158,9 +188,13 @@ namespace TouristGuide2
                     for (int i = 0; i < temp.Count; i++)
                     {
                         if (criterion == "cost")
+                        {
                             x = temp[i].Cost;
+                        }
                         else
+                        {
                             x = temp[i].Duration;
+                        }
 
                         if (x < Convert.ToInt32(min))
                         {
@@ -174,10 +208,13 @@ namespace TouristGuide2
                     for (int i = 0; i < temp.Count; i++)
                     {
                         if (criterion == "cost")
+                        {
                             x = temp[i].Cost;
+                        }
                         else
+                        {
                             x = temp[i].Duration;
-
+                        }
                         if (x < Convert.ToInt32(min) || x > Convert.ToInt32(max))
                         {
                             temp.Remove(temp[i]);
