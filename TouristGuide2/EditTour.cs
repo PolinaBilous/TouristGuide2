@@ -31,7 +31,7 @@ namespace TouristGuide2
             InitializeComponent();
         }
 
-        // События для загрузки формы.
+        // Обработчик события для загрузки формы.
         private void EditTour_Load(object sender, EventArgs e)
         {           
             Company_box.Text = CurrentTour.Company;
@@ -45,7 +45,7 @@ namespace TouristGuide2
             Cost_box.Text = CurrentTour.Cost.ToString();
         }
 
-        // Событие для изменения путёвки в таблице(базе).
+        // Обработчик события для изменения путёвки в таблице (каталоге).
         private void Edit_Click(object sender, EventArgs e)
         {
             AddForm.FildValidation(this.Company_box, this.Cities_box, this.Duration_box, this.Cost_box, this.error);
@@ -67,7 +67,7 @@ namespace TouristGuide2
             }
         }
 
-        // События для изменения текста в TextBox.
+        // Оброботчик события для изменения текста в TextBox.
         #region
 
         private void Company_box_TextChanged(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace TouristGuide2
 
         #endregion
 
-        // События для нажатий кнопок на клавиатуре.
+        // Обработчик события для нажатий кнопок на клавиатуре.
         private void EditTour_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)

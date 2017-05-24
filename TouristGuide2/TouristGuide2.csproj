@@ -49,16 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddForm.cs">
+    <Compile Include="Manage\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddForm.Designer.cs">
+    <Compile Include="Manage\AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddFormInfo.cs">
+    <Compile Include="Manage\AddFormInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddFormInfo.Designer.cs">
+    <Compile Include="Manage\AddFormInfo.Designer.cs">
       <DependentUpon>AddFormInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Base.cs" />
@@ -76,16 +76,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchForm.cs">
+    <Compile Include="Search\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchForm.Designer.cs">
+    <Compile Include="Search\SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchFormInfo.cs">
+    <Compile Include="Search\SearchFormInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchFormInfo.Designer.cs">
+    <Compile Include="Search\SearchFormInfo.Designer.cs">
       <DependentUpon>SearchFormInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="TotalForm.cs">
@@ -95,10 +95,10 @@
       <DependentUpon>TotalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Tour.cs" />
-    <EmbeddedResource Include="AddForm.resx">
+    <EmbeddedResource Include="Manage\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddFormInfo.resx">
+    <EmbeddedResource Include="Manage\AddFormInfo.resx">
       <DependentUpon>AddFormInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditTour.resx">
@@ -116,10 +116,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SearchForm.resx">
+    <EmbeddedResource Include="Search\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchFormInfo.resx">
+    <EmbeddedResource Include="Search\SearchFormInfo.resx">
       <DependentUpon>SearchFormInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TotalForm.resx">

@@ -22,7 +22,7 @@ namespace TouristGuide2
             Environment.Exit(0);
         }
 
-        // Событие возвращения к основной базу после поиска.
+        // Обработчик события для возвращения к основному каталогу после поиска.
         private void return_to_base_Click(object sender, EventArgs e)
         {
             ShowTours(tours);
@@ -163,58 +163,37 @@ namespace TouristGuide2
 
             if (min.Trim() != "" || max.Trim() != "")
             {
-                if (min == "")
+                for (int i = 0; i < temp.Count; i++)
                 {
-                    for (int i = 0; i < temp.Count; i++)
+                    if (criterion == "cost")
                     {
-                        if (criterion == "cost")
-                        {
-                            x = temp[i].Cost;
-                        }
-                        else
-                        {
-                            x = temp[i].Duration;
-                        }
+                        x = temp[i].Cost;
+                    }
+                    else
+                    {
+                        x = temp[i].Duration;
+                    }
 
+                    if (min == "")
+                    {
                         if (x > Convert.ToInt32(max))
                         {
                             temp.Remove(temp[i]);
                             i--;
                         }
                     }
-                }
-                else if (max == "")
-                {
-                    for (int i = 0; i < temp.Count; i++)
-                    {
-                        if (criterion == "cost")
-                        {
-                            x = temp[i].Cost;
-                        }
-                        else
-                        {
-                            x = temp[i].Duration;
-                        }
 
+                    else if (max == "")
+                    {
                         if (x < Convert.ToInt32(min))
                         {
                             temp.Remove(temp[i]);
                             i--;
                         }
                     }
-                }
-                else
-                {
-                    for (int i = 0; i < temp.Count; i++)
+
+                    else
                     {
-                        if (criterion == "cost")
-                        {
-                            x = temp[i].Cost;
-                        }
-                        else
-                        {
-                            x = temp[i].Duration;
-                        }
                         if (x < Convert.ToInt32(min) || x > Convert.ToInt32(max))
                         {
                             temp.Remove(temp[i]);
@@ -225,7 +204,7 @@ namespace TouristGuide2
             }
         }
 
-        // События для поиска путёвок.
+        // Обработчик события для поиска путёвок.
         private void SearchTour_Click(object sender, EventArgs e)
         {
             Base temp = new Base();
@@ -268,14 +247,14 @@ namespace TouristGuide2
                 ShowTours(temp);
         }
 
-        // Событие для открытия справки.
+        // Обработчик события для открытия справки.
         private void Info_Click(object sender, EventArgs e)
         {
             SearchFormInfo f = new SearchFormInfo();
             f.Show();
        }
 
-        // Событие для нажатия клавиш на клавиатуре.
+        // Обработчик события для нажатия клавиш на клавиатуре.
         private void SearchForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)

@@ -53,6 +53,7 @@
             this.Edit = new System.Windows.Forms.Button();
             this.Info = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DeleteCurrent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +117,9 @@
             // OpenBase
             // 
             this.OpenBase.Location = new System.Drawing.Point(947, 320);
+            this.OpenBase.Size = new System.Drawing.Size(137, 59);
             this.OpenBase.TabIndex = 115;
+            this.OpenBase.Text = "Открыть каталог";
             // 
             // Home
             // 
@@ -126,11 +129,11 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(511, 9);
+            this.label10.Location = new System.Drawing.Point(497, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 39);
+            this.label10.Size = new System.Drawing.Size(176, 39);
             this.label10.TabIndex = 114;
-            this.label10.Text = "Страна или список стран";
+            this.label10.Text = "Страна или список стран (через запятую)";
             // 
             // label4
             // 
@@ -156,11 +159,11 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(308, 9);
+            this.label2.Location = new System.Drawing.Point(284, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 39);
+            this.label2.Size = new System.Drawing.Size(207, 39);
             this.label2.TabIndex = 111;
-            this.label2.Text = "Город или список городов*";
+            this.label2.Text = "Город или список городов (через запятую)*";
             // 
             // label1
             // 
@@ -359,12 +362,25 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // DeleteCurrent
+            // 
+            this.DeleteCurrent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.DeleteCurrent.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteCurrent.Location = new System.Drawing.Point(947, 385);
+            this.DeleteCurrent.Name = "DeleteCurrent";
+            this.DeleteCurrent.Size = new System.Drawing.Size(137, 41);
+            this.DeleteCurrent.TabIndex = 130;
+            this.DeleteCurrent.Text = "Удалить";
+            this.DeleteCurrent.UseVisualStyleBackColor = false;
+            this.DeleteCurrent.Click += new System.EventHandler(this.DeleteCurrent_Click);
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1096, 603);
+            this.Controls.Add(this.DeleteCurrent);
             this.Controls.Add(this.Info);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.save);
@@ -390,7 +406,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "AddForm";
-            this.Text = "AddForm";
+            this.Text = "Контроль каталогов";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddForm_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddForm_KeyDown);
             this.Controls.SetChildIndex(this.Company_box, 0);
@@ -424,6 +440,7 @@
             this.Controls.SetChildIndex(this.save, 0);
             this.Controls.SetChildIndex(this.Edit, 0);
             this.Controls.SetChildIndex(this.Info, 0);
+            this.Controls.SetChildIndex(this.DeleteCurrent, 0);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -456,5 +473,6 @@
         private System.Windows.Forms.Button Edit;
         private System.Windows.Forms.Button Info;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button DeleteCurrent;
     }
 }

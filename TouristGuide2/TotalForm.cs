@@ -32,7 +32,7 @@ namespace TouristGuide2
             }
         }
 
-        // События для открытия главной формы.
+        // Обработчик события для открытия главной формы.
         protected void Home_Click(object sender, EventArgs e)
         {
             HomeForm f = new HomeForm();
@@ -40,17 +40,24 @@ namespace TouristGuide2
             this.Hide();
         }
 
-        // Событие для открытия базы.
+        // Обработчик события для открытия базы.
         protected void OpenBase_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-            // Получаем выбранный файл.
-            string FileName = openFileDialog1.FileName;
-            // Читаем файл в строку.
-            string FileText = System.IO.File.ReadAllText(FileName);
-            tours = JsonConvert.DeserializeObject<Base>(FileText);
-            ShowTours(tours);
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                    return;
+                // Получаем выбранный файл.
+                string FileName = openFileDialog1.FileName;
+                // Читаем файл в строку.
+                string FileText = System.IO.File.ReadAllText(FileName);
+                tours = JsonConvert.DeserializeObject<Base>(FileText);
+                ShowTours(tours);
+            }
+            catch
+            {
+                MessageBox.Show("Выбранный вами файл не содержит каталога путёвок. Попробуйте еще раз!");
+            }
         }
     }
 }

@@ -104,7 +104,9 @@
             // OpenBase
             // 
             this.OpenBase.Location = new System.Drawing.Point(947, 301);
+            this.OpenBase.Size = new System.Drawing.Size(137, 53);
             this.OpenBase.TabIndex = 114;
+            this.OpenBase.Text = "Открыть каталог";
             // 
             // Home
             // 
@@ -124,11 +126,11 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(512, 30);
+            this.label10.Location = new System.Drawing.Point(491, 30);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 39);
+            this.label10.Size = new System.Drawing.Size(179, 39);
             this.label10.TabIndex = 114;
-            this.label10.Text = "Страна или список стран";
+            this.label10.Text = "Страна или список стран (через запятую)";
             // 
             // label3
             // 
@@ -144,11 +146,11 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(306, 30);
+            this.label2.Location = new System.Drawing.Point(282, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 39);
+            this.label2.Size = new System.Drawing.Size(192, 42);
             this.label2.TabIndex = 112;
-            this.label2.Text = "Город или список городов";
+            this.label2.Text = "Город или список городов (через запятую)";
             // 
             // label1
             // 
@@ -317,7 +319,7 @@
             this.return_to_base.Name = "return_to_base";
             this.return_to_base.Size = new System.Drawing.Size(137, 69);
             this.return_to_base.TabIndex = 113;
-            this.return_to_base.Text = "Вернуться к основной базе";
+            this.return_to_base.Text = "Вернуться к основному каталогу";
             this.return_to_base.UseVisualStyleBackColor = false;
             this.return_to_base.Click += new System.EventHandler(this.return_to_base_Click);
             // 
@@ -364,7 +366,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "SearchForm";
-            this.Text = "SearchForm";
+            this.Text = "Поиск путёвок";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchForm_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchForm_KeyDown);
             this.Controls.SetChildIndex(this.Company_box, 0);

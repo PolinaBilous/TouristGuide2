@@ -18,7 +18,7 @@ namespace TouristGuide2
             InitializeComponent();
         }
 
-        // Событие для открытия формы с добавлением и удалением путёвок.
+        // Обработчик события для открытия формы с добавлением и удалением путёвок.
         private void AddForm_Click(object sender, EventArgs e)
         {
             AddForm f = new AddForm();
@@ -26,7 +26,7 @@ namespace TouristGuide2
             this.Hide();
         }
 
-        // Событие для открытия формы с поиском путёвок.
+        // Обработчик события для открытия формы с поиском путёвок.
         private void SearchForm_Click(object sender, EventArgs e)
         {
             SearchForm f = new SearchForm();

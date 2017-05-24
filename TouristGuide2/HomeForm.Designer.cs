@@ -53,7 +53,7 @@
             this.SearchForm.Name = "SearchForm";
             this.SearchForm.Size = new System.Drawing.Size(278, 55);
             this.SearchForm.TabIndex = 5;
-            this.SearchForm.Text = "Поиск по путевкам";
+            this.SearchForm.Text = "Поиск по путёвкам";
             this.SearchForm.UseVisualStyleBackColor = false;
             this.SearchForm.Click += new System.EventHandler(this.SearchForm_Click);
             // 
@@ -65,7 +65,7 @@
             this.AddForm.Name = "AddForm";
             this.AddForm.Size = new System.Drawing.Size(339, 58);
             this.AddForm.TabIndex = 4;
-            this.AddForm.Text = "Добавить или удалить путевку";
+            this.AddForm.Text = "Контроль каталогов";
             this.AddForm.UseVisualStyleBackColor = false;
             this.AddForm.Click += new System.EventHandler(this.AddForm_Click);
             // 

@@ -55,12 +55,12 @@ namespace TouristGuide2
             }
         }
 
-        // Методы для валидации TextBox/
+        // Методы для валидации TextBox.
         #region
 
         public static void CompanyValidate(TextBox textBox)
         {
-            if (Regex.IsMatch(textBox.Text, @"^[а-яА-Я ]+$") || textBox.Text == "")
+            if (Regex.IsMatch(textBox.Text, @"^[а-яА-Я -]+$") || textBox.Text == "")
             {
                 textBox.BackColor = Color.White;
             }
@@ -72,7 +72,7 @@ namespace TouristGuide2
 
         public static void CitiesValidate(TextBox textBox)
         {
-            if (Regex.IsMatch(textBox.Text, @"^[а-яА-Я, -]+$") || textBox.Text == "")
+            if (Regex.IsMatch(textBox.Text, @"^([А-Яа-я]+ ?, ?)*[А-Яа-я]+$") || textBox.Text == "")
             {
                 textBox.BackColor = Color.White;
             }
@@ -96,13 +96,13 @@ namespace TouristGuide2
 
         #endregion
 
-        // События для закрытия формы.
+        // Обработчик события для закрытия формы.
         private void AddForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
 
-        // Событие для добавления путёвки.
+        // Обработчик события для добавления путёвки.
         private void AddTour_Click(object sender, EventArgs e)
         {
             int duration = 0;
@@ -150,7 +150,7 @@ namespace TouristGuide2
                     }
 
                     Tour tour = new Tour(company, cities, countries, accommodations, excursions, service, duration, dataFrom, cost);
-                    tours.Add(tour);
+                    tours.AddTour(tour);
                     dataGridView1.Rows.Add(tours[tours.Count - 1].Company, tours[tours.Count - 1].Cities, tours[tours.Count - 1].Countries,
                     tours[tours.Count - 1].Accommodations, tours[tours.Count - 1].Excursions, tours[tours.Count - 1].Service, 
                     tours[tours.Count - 1].Duration, tours[tours.Count - 1].DataFrom, tours[tours.Count - 1].Cost);
@@ -172,7 +172,7 @@ namespace TouristGuide2
             }
         }
 
-        // Событие для удаления путёвки.
+        // Обработчик события для удаления путёвки.
         private void delete_Click(object sender, EventArgs e)
         {
             int numOfTours = tours.Count;
@@ -255,7 +255,7 @@ namespace TouristGuide2
             }
         }
 
-        // Событие для сохранения путёвки.
+        // Обработчик события для сохранения путёвки.
         private void save_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel) { return; }
@@ -265,10 +265,10 @@ namespace TouristGuide2
             string BaseToString = JsonConvert.SerializeObject(tours);
             System.IO.File.WriteAllText(FileName, BaseToString);
 
-            MessageBox.Show("Фвйл успешно сохранен!");
+            MessageBox.Show("Файл успешно сохранен!");
         }
 
-        // Событие для редактироапния путёвки.
+        // Обработчик события для редактироапния путёвки.
         private void Edit_Click(object sender, EventArgs e)
         {
             try
@@ -284,14 +284,14 @@ namespace TouristGuide2
             }
         }
 
-        // Событие для открытия справки.
+        // Обработчик события для открытия справки.
         private void Info_Click(object sender, EventArgs e)
         {
             AddFormInfo f = new AddFormInfo();
             f.Show();
         }
 
-        // События для изменения текста в TextBox.
+        // Обработчики событий для изменения текста в TextBox.
         #region
 
         private void Company_box_TextChanged(object sender, EventArgs e)
@@ -325,7 +325,7 @@ namespace TouristGuide2
 
         #endregion
 
-        // События для нажатий кнопок на клавиатуре.
+        // Обработчик события для нажатий кнопок на клавиатуре.
         private void AddForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -338,6 +338,22 @@ namespace TouristGuide2
             {
                 AddFormInfo f = new AddFormInfo();
                 f.Show();
+            }
+        }
+
+        // Обработчик события удаления конкретной путёвки. 
+        private void DeleteCurrent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = dataGridView1.CurrentRow.Index;
+                Tour CurrentTour = tours[index];
+                tours.RemoveAt(index);
+                ShowTours(tours);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Вы не выбрали путевку. Попробуйте снова!");
             }
         }
     }

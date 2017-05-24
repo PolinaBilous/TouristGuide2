@@ -1,85 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TouristGuide2.AddForm" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+    <Position X="4.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>9gAARAAAACCAhDAAAACEAQ0KAJEEJACDAEAEBEAQABA=</HashCode>
-      <FileName>AddForm.cs</FileName>
+      <HashCode>9gAARAAAACCBhDAAAACkAQ0KAJEEJACDAEAEBEAQABA=</HashCode>
+      <FileName>Manage\AddForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.AddFormInfo" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="7" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>/yAARAAAAiCAgBDwBwCAAQACAAQAAAADEAAQAAAAADA=</HashCode>
-      <FileName>AddFormInfo.cs</FileName>
+      <FileName>Manage\AddFormInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.Base" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+    <Position X="9" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Base.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.EditTour" Collapsed="true">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+    <Position X="4.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>8AAARAAAAiACBBAAAAGAgAACAIAEIAECOAEAFAGQABA=</HashCode>
       <FileName>EditTour.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.HomeForm" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+    <Position X="1.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAIAAAAQwAAAAIAAA=</HashCode>
       <FileName>HomeForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TouristGuide2.Program" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TouristGuide2.SearchForm" Collapsed="true">
-    <Position X="2.75" Y="2" Width="1.5" />
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>8wQAAAAAECAAABAAAACAAAAKAAAABEAAAEAAAEChUEA=</HashCode>
-      <FileName>SearchForm.cs</FileName>
+      <FileName>Search\SearchForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.SearchFormInfo" Collapsed="true">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>/yQAAAAAEiAAgBCwBgCAAAACAAQAAEAAEEAQAAAAEHA=</HashCode>
-      <FileName>SearchFormInfo.cs</FileName>
+      <FileName>Search\SearchFormInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.TotalForm" Collapsed="true">
-    <Position X="1.75" Y="0.5" Width="1.5" />
+    <Position X="3" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAEAAiAAgAAAAACAwAAKAAy4ZwEAOQAAAAAAAAg=</HashCode>
       <FileName>TotalForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TouristGuide2.Tour" Collapsed="true">
-    <Position X="8.75" Y="2.5" Width="1.5" />
+    <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAIAAAAACAAAAQAAAARAAAAAAQAAAAAACBAAAAAA=</HashCode>
       <FileName>Tour.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TouristGuide2.Properties.Resources" Collapsed="true">
-    <Position X="8.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TouristGuide2.Properties.Settings" Collapsed="true">
-    <Position X="7" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
